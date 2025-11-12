@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  --font-sora: "Sora", sans-serif;
+  --font-code: "Source Code Pro", monospace;
+  --font-grotesk: "Space Grotesk", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-black text-white font-sans;
+  }
+}
+
+.grid-background {
+  background-color: #000000;
+  background-image: linear-gradient(rgba(50, 50, 50, 0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(50, 50, 50, 0.5) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.grid-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(rgba(100, 100, 100, 0.3) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(100, 100, 100, 0.3) 2px, transparent 2px);
+  background-size: 100px 100px;
+  pointer-events: none;
+}
+
