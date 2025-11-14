@@ -82,6 +82,29 @@ const AestheticForm = () => {
         />
       </div>
 
+       {/* Type Dropdown */}
+      <div className="mb-4">
+        <label htmlFor="type" className="block text-white text-sm font-medium mb-2">
+          Type
+        </label>
+        <select
+          id="type"
+          name="type"
+          value={formData.type}
+          onChange={handleChange}
+          required
+          className="w-full p-3 bg-purple-900 bg-opacity-60 rounded-lg border border-purple-600 text-white outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-200"
+        >
+          <option value="" className="bg-purple-900">
+            Select Type
+          </option>
+          {contentTypes.map((type) => (
+            <option key={type} value={type} className="bg-purple-900">
+              {type.charAt(0).toUpperCase() + type.slice(1)}
+            </option>
+          ))}
+        </select>
+      </div>
      
 
       {/* Link Input */}
