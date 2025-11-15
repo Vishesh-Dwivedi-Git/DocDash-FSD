@@ -33,7 +33,19 @@ const useStore = create((set,get) => ({
   },
 
   // Add an item manually to the store
-  
+  addItem: (link, type, title) => set((state) => ({
+    items: [...state.items, { link, type, title }],
+  })),
+  searchQuery: "",  // Default empty search query
+  setSearchQuery: (query) => set({ searchQuery: query }),  // Setter function for search query
+  filterItems: () => {
+    // Filter items based on search query
+    const query=get().searchQuery;
+    if(query.length<2)  return get().items;
+    else{
+           return get().items.filter((item) => item.title.toLowerCase().includes(query.toLowerCase()));
+  }
+  }, 
 
   // Reset all items in the store
   resetItems: () => set({ items: [] }),
@@ -65,7 +77,18 @@ export const useUploadStore = create((set,get) => ({
   },
 
   // Add an uploaded item to the store manually
- 
+  addUpload: (title, description, fileType, fileUrl) => set((state) => ({
+    uploads: [...state.uploads, { title, description, fileType, fileUrl }],
+  })),
+  searchQuery: "",
+  setSearchQuery: (query) => set({ searchQuery: query }),
+  filterUploads: () => {
+    const query = get().searchQuery;
+    if(query.length<2)  return get().uploads;
+    else{
+      return get().uploads.filter((upload) => upload.title.toLowerCase().includes(query.toLowerCase()));
+    }
+  },
   // Reset all uploads in the store
   resetUploads: () => set({ uploads: [] }),
 }));
