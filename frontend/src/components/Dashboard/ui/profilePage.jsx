@@ -8,7 +8,7 @@ const ProfilePage = () => {
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-    axios.get("https://docdash-production.up.railway.app/api/v1/profile", {
+    axios.get("https://docdash-fsd-production.up.railway.app/api/v1/profile", {
       headers: {
         "x-auth-token": token || "", // Add token to headers
       },

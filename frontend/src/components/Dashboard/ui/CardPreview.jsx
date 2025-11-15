@@ -6,7 +6,7 @@ const CardPreview = ({ upload }) => {
   const [showFullscreen, setShowFullscreen] = useState(false)
 
   const fileExtension = upload.file.split("?")[0].split(".").pop()?.toLowerCase()
-  const validLink = upload.file.startsWith("https://") ? upload.file : `https://${upload.file}`
+  const validLink = upload.file.startsWith("https://") ? upload.file : `s://${upload.file}`
 
   const handleDownload = async () => {
     try {

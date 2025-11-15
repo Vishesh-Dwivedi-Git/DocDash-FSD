@@ -42,6 +42,10 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage }).single("file");
 
+
+app.get("/", (req: Request, res: Response) => {
+  res.send("Welcome to DocDash Backend API");
+});
 // 🔹 Email/Password Signup
 app.post("/api/v1/signup", async (req, res) => {
   const { username, password } = req.body;

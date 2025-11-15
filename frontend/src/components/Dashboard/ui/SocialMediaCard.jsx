@@ -50,7 +50,7 @@ export default function SocialMediaCard({ title, link, type, itemId }) {
 
   const handleDelete = async () => {
     try {
-      const response = await axios.delete(`https://docdash-production.up.railway.app/api/social-media/${itemId}`, {
+      const response = await axios.delete(`https://docdash-fsd-production.up.railway.app/api/social-media/${itemId}`, {
         headers: {
           "Content-Type": "application/json",
           "x-auth-token": localStorage.getItem("token"),

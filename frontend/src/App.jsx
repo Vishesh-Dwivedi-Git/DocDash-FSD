@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-// import Header from "./components/LandingPage/Header";
-// import Hero from "./components/LandingPage/Hero";
-// import Features from "./components/LandingPage/Features";
-// import Pricing from "./components/LandingPage/Pricing";
-// import Footer from "./components/LandingPage/Footer";
+import Header from "./components/LandingPage/Header";
+import Hero from "./components/LandingPage/Hero";
+import Features from "./components/LandingPage/Features";
+import Pricing from "./components/LandingPage/Pricing";
+import Footer from "./components/LandingPage/Footer";
 import ButtonGradient from "./assets/ButtonGradient";
 import  SidebarDemo  from "./components/Dashboard/DashB";
 import Sign from "./components/SignIn/Sign";
@@ -52,11 +52,11 @@ function AppWithRouter() {
           path="/"
           element={
             <>
-              {/* <Header />
+             <Header />
               <Hero />
               <Features />
               <Pricing />
-              <Footer /> */}
+              <Footer /> 
             </>
           }
         />

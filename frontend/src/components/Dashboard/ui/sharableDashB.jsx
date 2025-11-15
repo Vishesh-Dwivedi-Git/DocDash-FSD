@@ -43,7 +43,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     if (hash) {
-      fetch(`https://docdash-production.up.railway.app/api/v1/${hash}`)
+      fetch(`https://docdash-fsd-production.up.railway.app/api/v1/${hash}`)
         .then((response) => response.json())
         .then((data) => {
           console.log("✅ API Response:", data);

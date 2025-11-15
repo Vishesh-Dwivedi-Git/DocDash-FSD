@@ -10,7 +10,7 @@ const useStore = create((set,get) => ({
       const token = localStorage.getItem("token");
 
       // Request with token (ensure the token exists)
-      const response = await axios.get("https://docdash-production.up.railway.app/api/v1/content", { 
+      const response = await axios.get("https://docdash-fsd-production.up.railway.app/api/v1/content", { 
         headers: {
           "Content-Type": "application/json",
           "x-auth-token": token || "",
@@ -61,7 +61,7 @@ export const useUploadStore = create((set,get) => ({
   fetchUploads: async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get("https://docdash-production.up.railway.app/api/v1/upload", {
+      const response = await axios.get("https://docdash-fsd-production.up.railway.app/api/v1/upload", {
         headers: {
           "Content-Type": "application/json",
           "x-auth-token": token || "",

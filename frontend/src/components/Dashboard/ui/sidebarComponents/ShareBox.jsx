@@ -8,7 +8,7 @@ const ShareBox = () => {
 
   useEffect(() => {
     if (showShareBox) {
-      fetch("https://docdash-production.up.railway.app/api/v1/share", {
+      fetch("https://docdash-fsd-production.up.railway.app/api/v1/share", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -18,7 +18,7 @@ const ShareBox = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          setShareLink(`https://docdash-production.up.railway.app/${data.hash}`);
+          setShareLink(`https://docdash-fsd-production.up.railway.app/${data.hash}`);
         })
         .catch((err) => console.error("Error fetching share link:", err));
     }

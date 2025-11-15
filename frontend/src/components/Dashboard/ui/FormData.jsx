@@ -38,7 +38,7 @@ const AestheticForm = () => {
     };
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.post("https://docdash-production.up.railway.app/api/v1/content", data, {
+      const response = await axios.post("https://docdash-fsd-production.up.railway.app/api/v1/content", data, {
         headers: {
           "Content-Type": "application/json",
           "x-auth-token": token || "",
@@ -190,7 +190,7 @@ export const UploadForm = () => {
 
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.post("https://docdash-production.up.railway.app/api/v1/upload", data, {
+      const response = await axios.post("https://docdash-fsd-production.up.railway.app/api/v1/upload", data, {
         headers: {
           "Content-Type": "multipart/form-data",
           "x-auth-token": token || "",
